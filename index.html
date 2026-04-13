@@ -15,7 +15,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(360deg, #000000, #000000);
+  background: linear-gradient(135deg, #000000, #111827);
   color: white;
 }
 
@@ -23,7 +23,7 @@ body {
 header {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(90deg, #000000, #000000);
+  background: linear-gradient(135deg, #000000, #111827);
 }
 
 header h1 {
@@ -50,11 +50,11 @@ h2 {
 
 /* CARDS */
 .card {
-  background: #af0000;
+  background: #1f2937;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 20px;
-  transition: 0.3s;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .card:hover {
@@ -82,10 +82,11 @@ h2 {
 }
 
 /* DESKTOP VIEW */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
+
 
   header h1 {
     font-size: 40px;
@@ -114,7 +115,7 @@ footer {
   object-fit: cover;
   display: block;
   margin: 15px auto;
-  border: 3px solid #38bdf8;
+  border: 3px solid #ef4444;
 }
 </style>
 
@@ -165,7 +166,7 @@ footer {
         <img src="unity.png" alt="Unity Game">
         <div class="card-content">
           <h3>🎮 3D Unity Game</h3>
-          <p>Simple 3D game with movement and camera system.</p>
+          <p>Developed a basic 3D game using Unity with player movement, camera control, and physics system.</p>
         </div>
       </div>
 
@@ -193,10 +194,18 @@ footer {
     <h2>Contact</h2>
     <div class="card">
       <div class="card-content">
-        <p>Email: pascuacharlimagnee@gmail.com</p>
-        <p>Cellphone No: +63-09158954910</p>
+        <p>Email: <a href="mailto:pascuacharlimagnee@gmail.com">pascuacharlimagnee@gmail.com</a></p>
+        <p>Phone: <a href="tel:+639158954910">09158954910</a></p>
         <p>Facebook: Charlimagne Pascua</p>
-        <p>My Resume: https://drive.google.com/file/d/1n0JKASD-GCj26d5AWsZ9lkWJ6x5b59Lu/view?usp=sharing</p>
+       <p>Resume: <a href="https://drive.google.com/file/d/1n0JKASD-GCj26d5AWsZ9lkWJ6x5b59Lu/view?usp=sharing" target="_blank" style="
+display:inline-block;
+margin-top:10px;
+padding:10px 15px;
+background:#ef4444;
+color:white;
+border-radius:8px;
+text-decoration:none;">
+Download Resume>View Resume</a></p>
       </div>
     </div>
   </section>
