@@ -13,50 +13,85 @@
 }
 
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #0f172a;
   color: white;
 }
 
+/* HEADER */
 header {
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 20px;
   background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 header h1 {
-  font-size: 40px;
+  font-size: 32px;
 }
 
 header p {
   color: #94a3b8;
 }
 
+/* CONTAINER */
 .container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 20px;
 }
 
+/* TITLES */
 h2 {
   margin-bottom: 15px;
   color: #38bdf8;
 }
 
+/* CARDS */
 .card {
   background: #1e293b;
-  padding: 20px;
-  margin-bottom: 15px;
   border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
   background: #334155;
 }
 
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.card-content {
+  padding: 15px;
+}
+
+/* GRID (RESPONSIVE) */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+/* DESKTOP VIEW */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header h1 {
+    font-size: 40px;
+  }
+}
+
+/* SKILLS */
 .skills span {
   display: inline-block;
   background: #334155;
@@ -65,6 +100,7 @@ h2 {
   border-radius: 20px;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -73,25 +109,30 @@ footer {
 </style>
 
 </head>
+
 <body>
 
 <header>
   <h1>Your Name</h1>
-  <p>IT Support | Unity Game Developer | Arduino Enthusiast</p>
+  <p>IT Support | Unity Developer | Arduino | CCTV Technician</p>
 </header>
 
 <div class="container">
 
+  <!-- ABOUT -->
   <section>
     <h2>About Me</h2>
     <div class="card">
-      <p>
-        Computer Science graduate with experience in game development using Unity, 
-        Arduino projects, IT troubleshooting, and CCTV installation.
-      </p>
+      <div class="card-content">
+        <p>
+          Computer Science graduate with skills in Unity game development, Arduino projects,
+          IT troubleshooting, video editing, and CCTV installation.
+        </p>
+      </div>
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section>
     <h2>Skills</h2>
     <div class="skills">
@@ -103,30 +144,46 @@ footer {
     </div>
   </section>
 
+  <!-- PROJECTS -->
   <section>
     <h2>Projects</h2>
 
-    <div class="card">
-      <h3>🎮 3D Unity Game</h3>
-      <p>Developed a simple 3D game with player movement and camera system.</p>
-    </div>
+    <div class="grid">
 
-    <div class="card">
-      <h3>🔌 Arduino Project</h3>
-      <p>Created a sensor-based system using Arduino components.</p>
-    </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="Unity Game">
+        <div class="card-content">
+          <h3>🎮 3D Unity Game</h3>
+          <p>Simple 3D game with movement and camera system.</p>
+        </div>
+      </div>
 
-    <div class="card">
-      <h3>📷 CCTV Installation</h3>
-      <p>Installed and configured CCTV systems with remote mobile viewing.</p>
-    </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="Arduino Project">
+        <div class="card-content">
+          <h3>🔌 Arduino Project</h3>
+          <p>Sensor-based system using Arduino components.</p>
+        </div>
+      </div>
 
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="CCTV">
+        <div class="card-content">
+          <h3>📷 CCTV Installation</h3>
+          <p>Installed and configured CCTV systems with remote viewing.</p>
+        </div>
+      </div>
+
+    </div>
   </section>
 
+  <!-- CONTACT -->
   <section>
     <h2>Contact</h2>
     <div class="card">
-      <p>Email: your@email.com</p>
+      <div class="card-content">
+        <p>Email: your@email.com</p>
+      </div>
     </div>
   </section>
 
