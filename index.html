@@ -1,10 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+
+<title>Charlimagne Pascua | Portfolio</title>
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 * {
@@ -17,21 +20,52 @@ body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #000000, #111827);
   color: white;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.9);
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+
+nav a {
+  color: #ef4444;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: white;
 }
 
 /* HEADER */
 header {
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #000000, #111827);
+  padding: 50px 20px;
 }
 
 header h1 {
-  font-size: 32px;
+  font-size: 40px;
 }
 
 header p {
-  color: #d30000;
+  color: #ef4444;
+}
+
+/* PROFILE PIC */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 15px auto;
+  border: 3px solid #ef4444;
 }
 
 /* CONTAINER */
@@ -45,21 +79,35 @@ header p {
 /* TITLES */
 h2 {
   margin-bottom: 15px;
-  color: #c70000;
+  color: #ef4444;
 }
 
-/* CARDS */
+/* CARD */
 .card {
   background: #1f2937;
-  border-radius: 12px;
-  overflow: hidden;
+  border-radius: 13px;
   margin-bottom: 20px;
-  transition: transform 0.3s ease, background 0.3s ease;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .card:hover {
-  transform: scale(1.02);
-  background: #000000;
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #ef4444;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /* IMAGE */
@@ -71,35 +119,40 @@ h2 {
 
 /* CONTENT */
 .card-content {
-  padding: 15px;
-}
-
-/* GRID (RESPONSIVE) */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-}
-
-/* DESKTOP VIEW */
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-
-  header h1 {
-    font-size: 40px;
-  }
+  padding: 20px;
 }
 
 /* SKILLS */
-.skills span {
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill-bar {
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-bar div {
+  background: #ef4444;
+  padding: 5px;
+  text-align: right;
+}
+
+/* BUTTON */
+.btn {
   display: inline-block;
-  background: #000000;
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 20px;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #ef4444;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #dc2626;
 }
 
 /* FOOTER */
@@ -108,120 +161,147 @@ footer {
   padding: 20px;
   color: #94a3b8;
 }
-.profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 15px auto;
-  border: 3px solid #ef4444;
-}
 </style>
-
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HEADER -->
 <header>
-  <img src="Resume 2025.jpeg" alt="Profile" class="profile-pic">
-  <h1>Charlimagne Evangelista Pascua</h1>
-  <p>IT Support | Unity Mobile 3D Game Developer | Arduino Prototyping | Video Editing | CCTV Technician</p>
+  <img src="Resume 2025.jpeg" class="profile-pic">
+  <h1>Charlimagne Pascua</h1>
+  <p>IT Support | Unity Developer | Arduino | CCTV Technician</p>
+
+  <a href="https://www.linkedin.com/in/charlimagne-pascua-2755a4366/" class="btn">Hire Me</a>
 </header>
 
 <div class="container">
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About Me</h2>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <div class="card-content">
+      <p>
+        Computer Science graduate with experience in IT troubleshooting,
+        Unity mobile game development, Arduino systems, and CCTV installation.
+        I am passionate about solving technical problems and building real-world solutions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I CAN DO -->
+<section>
+  <h2>What I Can Do</h2>
+  <div class="card">
+    <div class="card-content">
+      <ul>
+        <li>Troubleshoot hardware and software issues</li>
+        <li>Develop Unity-based applications and games</li>
+        <li>Setup and configure CCTV systems</li>
+        <li>Build Arduino-based automation systems</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skill">
+    <p>Unity (C#)</p>
+    <div class="skill-bar"><div style="width:80%">80%</div></div>
+  </div>
+
+  <div class="skill">
+    <p>Arduino</p>
+    <div class="skill-bar"><div style="width:75%">75%</div></div>
+  </div>
+
+  <div class="skill">
+    <p>IT Support</p>
+    <div class="skill-bar"><div style="width:90%">90%</div></div>
+  </div>
+
+  <div class="skill">
+    <p>Video Editing</p>
+    <div class="skill-bar"><div style="width:70%">70%</div></div>
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="grid">
+
     <div class="card">
+      <img src="AR.jpeg">
       <div class="card-content">
+        <h3><i class="fa-solid fa-gamepad"></i> Mobile AR Unity Game</h3>
         <p>
-          Computer Science graduate with skills in Unity Mobile 3D Game Development, Arduino projects,
-          IT troubleshooting, Video Editing, and CCTV Installation.
+          Developed an augmented reality mobile application for PC assembly and disassembly training using Unity.
         </p>
       </div>
     </div>
-  </section>
 
-  <!-- SKILLS -->
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>Unity (C#)</span>
-      <span>Arduino</span>
-      <span>Video Editing</span>
-      <span>IT Support</span>
-      <span>CCTV Installation</span>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section>
-    <h2>Projects</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <img src="AR.jpeg" alt="Unity Game">
-        <div class="card-content">
-          <h3>🎮 Mobile AR 3D Unity Game</h3>
-          <p>I developed an Augmented Reality mobile 3D game using Unity for PC Assembly and Disassembly.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="arduino.jpg" alt="Arduino Prototyping">
-        <div class="card-content">
-          <h3>🔌 Arduino Prototyping</h3>
-          <p>I developed a Plant Watering System for small garden. A sensor-based system using Arduino components.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="CCTV.jpg" alt="CCTV Installation">
-        <div class="card-content">
-          <h3>📷 CCTV Installation</h3>
-          <p>Installed and configured CCTV systems with remote viewing.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section>
-    <h2>Contact</h2>
     <div class="card">
+      <img src="arduino.jpg">
       <div class="card-content">
-        <p>Email: pascuacharlimagnee@gmail.com</p>
-        <p>Phone: (+63) 09158954910</p>
-        <p>Facebook: <a href="https://www.facebook.com/pascuacharlimagne/" target="_blank" style="
-display:inline-block;
-margin-top:10px;
-padding:10px 15px;
-background:#ef4444;
-color:white;
-border-radius:8px;
-text-decoration:none;">
-View my Facebook</a></p>
-        <p>Resume: <a href="https://drive.google.com/file/d/1OXersAzx9GvGYQRrPyo3onBqgXF12NSB/view?usp=sharing" target="_blank" style="
-display:inline-block;
-margin-top:10px;
-padding:10px 15px;
-background:#ef4444;
-color:white;
-border-radius:8px;
-text-decoration:none;">
-Download Resume>View Resume</a></p>
+        <h3><i class="fa-solid fa-microchip"></i> Arduino Plant System</h3>
+        <p>
+          Designed an automated plant watering system using sensors to monitor soil moisture.
+        </p>
       </div>
     </div>
-  </section>
+
+    <div class="card">
+      <img src="CCTV.jpg">
+      <div class="card-content">
+        <h3><i class="fa-solid fa-video"></i> CCTV Installation</h3>
+        <p>
+          Installed and configured CCTV systems with remote monitoring capabilities.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <div class="card-content">
+      <p>Email: <a href="mailto:pascuacharlimagnee@gmail.com">pascuacharlimagnee@gmail.com</a></p>
+      <p>Phone: <a href="tel:+639158954910">09158954910</a></p>
+
+      <a href="https://www.facebook.com/pascuacharlimagne/" target="_blank" class="btn">
+        Facebook Profile
+      </a>
+
+      <a href="https://drive.google.com/file/d/1OXersAzx9GvGYQRrPyo3onBqgXF12NSB/view?usp=sharing" target="_blank" class="btn">
+        Download Resume
+      </a>
+    </div>
+  </div>
+</section>
 
 </div>
 
 <footer>
-  <p>© 2026 Charlimagne Evangelista Pascua</p>
+  <p>© 2026 Charlimagne Pascua</p>
 </footer>
 
 </body>
